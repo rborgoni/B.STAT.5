@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   resources: 
-   - 01_intro.pdf
+   - Liceo Lussana_Bergamo_Slide informativa Percorso PNRR.pptx
 
 website:
   title: "Stats4schools"
