@@ -5,13 +5,12 @@ project:
    - 01_intro.pdf
 
 website:
-  title: "titolo"
+  title: "Stats4schools"
   search: false
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
 
 format:
   html:
