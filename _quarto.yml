@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+  resources: 
+   - 01_intro.pdf
+
+website:
+  title: "titolo"
+  search: false
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

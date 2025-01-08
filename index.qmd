@@ -1,0 +1,106 @@
+---
+title: "Analisi di dati ambientali tramite risorse open source per la data science"
+author: "Riccardo Borgoni"
+institute: "Università di Milano Bicocca"
+date: today
+---
+
+# Program
+
+1.  AAAA
+2.  BBBB
+
+
+# References
+
+Kleinbaum, D.G. and Klein, M. Survival Analysis: A Self-Learning Text. 3rd Edition, Springer, New York, 2012. https://doi.org/10.1007/978-1-4419-6646-9
+
+# Schedule
+
+The lessons will be held via Google Meet sessions according to the following schedule:
+
+-   Tuesday, April 2, 15.30-18.00
+
+-   Monday, April 8, 15.30-18.00
+
+-   Monday, April 15, 15.30-18.00
+
+-   Wednesday, April 17, 15.30-18.00 (cancelled)
+
+-   Monday, April 22, 15.30-18.00
+
+-   Tuesday, April 30, 15.30-18.00
+
+-   Monday, May 6, 15.30-18.00
+
+-   Wednesday, May 8 15.30-18.00
+
+-   Monday, May 20, 15.30-18.00
+
+# Final Assessment
+
+<!-- [Assessment paper](assessment.pdf) (due by June 7, 2024) -->
+
+<!-- [Data for the assessment (csv format)](prost.csv) -->
+
+# Materials
+
+<!-- **Data** data for tutorials [excel](dat1.xlsx); [csv](dat1.csv); -->
+
+**Lecture 1**:Tuesday, April 2
+
+1.  [introduction](01_intro.pdf)
+
+2.  [frequency distributions](02_frequency_distributions.pdf)
+
+3.  [graphical reprentations](03_graphs.pdf)
+
+4.  Tutorial 1 [Tutorial 1: text](tutorial1.pdf)
+
+**Lecture 2**: Monday, April 8
+
+1.  [measures of location](04_location.pdf)
+
+2.  Tutorial 2 [Tutorial 2: text](tutorial2.pdf)
+
+**Lecture 3**: Monday, April 15
+
+1.  [measures of variability](05_variability.pdf)
+
+2.  [measures of the shape](06_shape.pdf) of the frequency distribution
+
+3.  [bivariate data analysis](07_association.pdf) (part 1)
+
+4.  Tutorial 3 [Tutorial 3: text](tutorial3.pdf)
+
+5.  Tutorial 4 [Tutorial 4: text](tutorial4.pdf)
+
+**Lecture 4**: Monday, April 22
+
+1.  [bivariate data analysis](07_association.pdf) (part 2)
+
+2.  [(A gentle) Introduction to probability theory](08_Probability.pdf).
+
+3.  Tutorial 5 [Descriptive Statistics with R](Tutorial_1_R.html)
+
+**Lecture 5**: Tuesday, April 30
+
+1.  [Random variables](09_RandomVariable.pdf)
+
+2.  [Point estimation and confidence Interval](10_ParameterEstimate.pdf)
+
+**Lecture 6**: [Statistical tests, Part 1](11_StatHpTesting.pdf): Tuesday, May 6
+
+**Lecture 7**: Wednesday, May 8
+
+1.  [Statistical tests, Part 2](12_StatHpTesting-2.pdf)
+
+2.  Tutorial 6 [Tutorial 6: text](tutorial6.pdf)
+
+3.  Tutorial 7 [Statistical tests with R](Tutorial_2_R.html)
+
+**Lecture 8**: Monday, May 20
+
+1.  [Introduction to Survival Analysis](13_Survival.pdf)
+
+2.  Tutorial 8 [Survival Analysis with R](Tutorial_3_R.html)
