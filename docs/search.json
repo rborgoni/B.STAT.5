@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course of Biostatistics",
+    "section": "",
+    "text": "Program\n\nDescriptive statistics: frequency distribution, measures of location and variability, graphical representations\nIntroduction to inferential statistics\nIntroduction to survival analysis\n\n\n\nReferences\nKleinbaum, D.G. and Klein, M. Survival Analysis: A Self-Learning Text. 3rd Edition, Springer, New York, 2012. https://doi.org/10.1007/978-1-4419-6646-9\nElston, R.C., and William J. Basic biostatistics for geneticists and epidemiologists: A practical approach. John Wiley & Sons, 2008.\nAgresti, A. Statistical Methods for the Social Sciences, eBook, Global Edition. 5th Edition. Pearson International Content, 2018. (Basic)\nCicchitelli, G, D’Urso, P, Minozzo, M. Statistics: Principles and Methods,  Pearson, 2021. (Intermediate)\nMood, A., Graybill, F. Boes, D.  Introduction to the Theory of Statistics. 3rd Edition, McGraw-Hill, New York. 1974. (Advanced)\n\n\nSchedule\nThe lessons will be held via Google Meet sessions according to the following schedule:\n\nTuesday, April 2, 15.30-18.00\nMonday, April 8, 15.30-18.00\nMonday, April 15, 15.30-18.00\nWednesday, April 17, 15.30-18.00 (cancelled)\nMonday, April 22, 15.30-18.00\nTuesday, April 30, 15.30-18.00\nMonday, May 6, 15.30-18.00\nWednesday, May 8 15.30-18.00\nMonday, May 20, 15.30-18.00\n\n\n\nFinal Assessment\nAssessment paper (due by June 7, 2024)\nData for the assessment (csv format)\n\n\nMaterials\nData data for tutorials excel; csv;\nLecture 1:Tuesday, April 2\n\nintroduction\nfrequency distributions\ngraphical reprentations\nTutorial 1 Tutorial 1: text\n\nLecture 2: Monday, April 8\n\nmeasures of location\nTutorial 2 Tutorial 2: text\n\nLecture 3: Monday, April 15\n\nmeasures of variability\nmeasures of the shape of the frequency distribution\nbivariate data analysis (part 1)\nTutorial 3 Tutorial 3: text\nTutorial 4 Tutorial 4: text\n\nLecture 4: Monday, April 22\n\nbivariate data analysis (part 2)\n(A gentle) Introduction to probability theory.\nTutorial 5 Descriptive Statistics with R\n\nLecture 5: Tuesday, April 30\n\nRandom variables\nPoint estimation and confidence Interval\n\nLecture 6: Statistical tests, Part 1: Tuesday, May 6\nLecture 7: Wednesday, May 8\n\nStatistical tests, Part 2\nTutorial 6 Tutorial 6: text\nTutorial 7 Statistical tests with R\n\nLecture 8: Monday, May 20\n\nIntroduction to Survival Analysis\nTutorial 8 Survival Analysis with R"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]
