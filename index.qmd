@@ -1,49 +1,45 @@
 ---
-title: "Analisi di dati ambientali tramite risorse open source per la data science"
+title: "Analisi di dati ambientali tramite risorse open source per la Data Science"
 author: "Riccardo Borgoni"
 institute: "Università di Milano Bicocca"
 date: today
 ---
 
-# Program
-
-1.  AAAA
-2.  BBBB
+# Programma del corso
 
 
-# References
+Il corso fornisce alcune informazioni di base su un applicativo software di tipo open source per l’analisi statistica delle serie temporali e spaziali di dati ambientali. Saranno descritti i principali operatori di sintesi dei dati e strumenti per la loro rappresentazione grafica. Verrà introdotto il concetto di geolocalizzazione dell’informazione e i principali formati di dati spaziali (raster e vettoriali). Si introdurranno infine alcune tecniche per l’interpolazione di serie temporali e spaziali e alcune esemplificazioni relative alla realizzazione di mappe tematiche.
 
-Kleinbaum, D.G. and Klein, M. Survival Analysis: A Self-Learning Text. 3rd Edition, Springer, New York, 2012. https://doi.org/10.1007/978-1-4419-6646-9
+1.    Introduzione al software di tipo open source per l’analisi dei dati.
 
-# Schedule
+2.    Descrizione quantitativa dei dati ambientali.
 
-The lessons will be held via Google Meet sessions according to the following schedule:
+3.    L’analisi delle serie temporali di indicatori ambientali.
 
--   Tuesday, April 2, 15.30-18.00
+4.    La georeferenziazione dei dati.
 
--   Monday, April 8, 15.30-18.00
+5.    L’analisi dei dati spaziali e territoriali. 
 
--   Monday, April 15, 15.30-18.00
+6.    La realizzazione di mappe tematiche.
 
--   Wednesday, April 17, 15.30-18.00 (cancelled)
 
--   Monday, April 22, 15.30-18.00
 
--   Tuesday, April 30, 15.30-18.00
+# Calendario degli incontri
 
--   Monday, May 6, 15.30-18.00
+Gli incontri si svolgeranno secondo il seguente calendario:
 
--   Wednesday, May 8 15.30-18.00
+-   Giovedì 6 Febbraio 2025, 09.30-13.30, lab 908 ([edificio U9 - KOINÈ](https://maps.app.goo.gl/JyDtaHD5Jjffjsoa7))
 
--   Monday, May 20, 15.30-18.00
+-   Giovedì 13 Febbraio 2025, 09.30-13.30, lab 719 ([edificio U7 - CIVITAS](https://maps.app.goo.gl/dnad4RbTTkhq3fX36))
 
-# Final Assessment
 
-<!-- [Assessment paper](assessment.pdf) (due by June 7, 2024) -->
+-   Martedì 18 Febbraio 2025, 09.00-13.00, liceo Lussana di Bergamo
 
-<!-- [Data for the assessment (csv format)](prost.csv) -->
+-   Mercoledì 26 Febbraio 2025, 09.00-13.00, liceo Lussana di Bergamo
 
-# Materials
+
+
+# Materiale
 
 <!-- **Data** data for tutorials [excel](dat1.xlsx); [csv](dat1.csv); -->
 
@@ -52,3 +48,18 @@ The lessons will be held via Google Meet sessions according to the following sch
 1.  [introduzione al progetto PNRR](Liceo Lussana_Bergamo_Slide informativa Percorso PNRR.pptx)
 
 <!-- 2.  [frequency distributions](02_frequency_distributions.pdf) -->
+
+
+
+# Final Assessment
+
+<!-- [Assessment paper](assessment.pdf) (due by June 7, 2024) -->
+
+<!-- [Data for the assessment (csv format)](prost.csv) -->
+
+
+
+# References
+
+Kleinbaum, D.G. and Klein, M. Survival Analysis: A Self-Learning Text. 3rd Edition, Springer, New York, 2012. https://doi.org/10.1007/978-1-4419-6646-9
+
