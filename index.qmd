@@ -38,6 +38,10 @@ Gli incontri si svolgeranno secondo il seguente calendario:
 -   Mercoledì 26 Febbraio 2025, 10.00-13.00, liceo Lussana di Bergamo
 
 
+# Link a R e RStudio
+
+Ai seguenti link è possibile scaricare le ultime versioni di [R](https://cran.r-project.org/bin/windows/base/) e di [RStudio](https://posit.co/download/rstudio-desktop/).
+
 
 # Materiale
 
