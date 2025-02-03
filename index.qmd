@@ -1,7 +1,7 @@
 ---
 title: "Analisi di dati ambientali tramite risorse open source per la Data Science"
-author: "Riccardo Borgoni"
-institute: "Università di Milano Bicocca"
+author: "Riccardo Borgoni, Roberto Ascari e Paolo Maranzano"
+institute: "Università di Milano-Bicocca"
 date: today
 ---
 
@@ -53,7 +53,7 @@ Ai seguenti link è possibile scaricare le ultime versioni di [R](https://cran.r
 
 <!-- 2.  [frequency distributions](02_frequency_distributions.pdf) -->
 
-2.  [Introduzione alla Statistica Descrittiva con R - Slide](Slide/BSTAT5 - IntroR - 1.pptx)
+2.  [Introduzione alla Statistica Descrittiva con R - Slide](Slide/BSTAT5 - IntroR - 1.pdf)
 
 # Final Assessment
 
