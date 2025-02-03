@@ -47,15 +47,21 @@ Ai seguenti link è possibile scaricare le ultime versioni di [R](https://cran.r
 
 <!-- **Data** data for tutorials [excel](dat1.xlsx); [csv](dat1.csv); -->
 
-**Lecture 1**:Tuesday, April 2
 
 1.  [Introduzione al progetto PNRR](Liceo Lussana_Bergamo_Slide informativa Percorso PNRR.pptx)
 
 <!-- 2.  [frequency distributions](02_frequency_distributions.pdf) -->
 
-2.  [Introduzione alla Statistica Descrittiva con R - Slide](Slide/BSTAT5 - IntroR - 1.pdf)
+2.  [Introduzione alla Statistica Descrittiva con R - Slide](IntroR/BSTAT5 - IntroR - 1.pdf)
 
-# Final Assessment
+3.  [Agrimonia - Metadati](Dati Agrimonia/LussanaPNRR - Metadata Agrimonia.xlsx)
+
+4.  [Agrimonia - Metadati](IntroR/Agrimonia.RData)
+
+5.  [Agrimonia - Centraline](IntroR/Centraline.csv)
+
+
+<!-- # Final Assessment -->
 
 <!-- [Assessment paper](assessment.pdf) (due by June 7, 2024) -->
 
@@ -63,7 +69,7 @@ Ai seguenti link è possibile scaricare le ultime versioni di [R](https://cran.r
 
 
 
-# References
+<!-- # References -->
 
-Kleinbaum, D.G. and Klein, M. Survival Analysis: A Self-Learning Text. 3rd Edition, Springer, New York, 2012. https://doi.org/10.1007/978-1-4419-6646-9
+<!-- Kleinbaum, D.G. and Klein, M. Survival Analysis: A Self-Learning Text. 3rd Edition, Springer, New York, 2012. https://doi.org/10.1007/978-1-4419-6646-9 -->
 
