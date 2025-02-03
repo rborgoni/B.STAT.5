@@ -49,11 +49,11 @@ Ai seguenti link è possibile scaricare le ultime versioni di [R](https://cran.r
 
 **Lecture 1**:Tuesday, April 2
 
-1.  [introduzione al progetto PNRR](Liceo Lussana_Bergamo_Slide informativa Percorso PNRR.pptx)
+1.  [Introduzione al progetto PNRR](Liceo Lussana_Bergamo_Slide informativa Percorso PNRR.pptx)
 
 <!-- 2.  [frequency distributions](02_frequency_distributions.pdf) -->
 
-
+2.  [Introduzione alla Statistica Descrittiva con R - Slide](Slide/BSTAT5 - IntroR - 1.pptx)
 
 # Final Assessment
 
