@@ -58,7 +58,7 @@ Ai seguenti link è possibile scaricare le ultime versioni di [R](https://cran.r
 
 4.  [Agrimonia - Dati](IntroR/Agrimonia.RData)
 
-5.  [Agrimonia - Centraline](IntroR/Centraline.csv)
+5.  [Agrimonia - Dati centraline](IntroR/Centraline.csv)
 
 
 <!-- # Final Assessment -->
