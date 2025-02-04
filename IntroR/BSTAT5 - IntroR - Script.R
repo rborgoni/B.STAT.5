@@ -255,25 +255,10 @@ lines(centr2_2021$Time, centr2_2021$AQ_pm10, col = "red")
 
 
 
-#------------- DA FARE:
-
-##########
-# Aggregare per anno per Riccardo
-
-dati_2021 <- subset(dati, Year == 2021)
-dati_2021$IDStation = as.factor(dati_2021$IDStation)
-
-medie_centraline <- aggregate(AQ_pm10 ~ IDStation, data = dati_2021, mean)
-
-
-# Cambio il nome ad una variabile:
-colnames(medie_centraline)
-colnames(medie_centraline)[2] = "Media PM10"
-
-
 
 ####################################################
 ####### Creiamo dei nuovi dataset che contengano nuove informazioni:
+
 
 # Vogliamo creare un nuovo daataset che consideri le centraline
 # come unita' statistiche. Per ogni centralina vogliamo
@@ -281,18 +266,45 @@ colnames(medie_centraline)[2] = "Media PM10"
 # e le informazioni relative ad altitudine, latitudine e longitudine 
 # presenti nel dataset Centraline.csv
 
+# Step 1: Ottengo i dati relativi alle rilevazioni di tutte
+# le centraline che corrispondono all'anno 2021.
+
+dati_2021 <- subset(dati, Year == 2021)
+dati_2021$IDStation = as.factor(dati_2021$IDStation)
+
+# Step 2: aggrego le unità statistiche che corrispondono ad una 
+# stessa centralina tramite la media del PM10
+medie_centraline <- aggregate(AQ_pm10 ~ IDStation, data = dati_2021, mean)
+
+
+# Per ottenere un risultato migliore, cambio il nome ad una variabile:
+colnames(medie_centraline)
+colnames(medie_centraline)[2] = "Media PM10"
+
+
+
+# Step 3: importo i dati relativi alle centraline:
+
 
 # IMPORTARE CENTRALINE CON IMPORT DATASET:
 dim(medie_centraline)
 dim(Centraline)
 
-dim(merge(medie_centraline, Centraline))
 
+# Step 4: unisco i dataset tramite un inner join (vedi slide)
 centraline_2021 = merge(medie_centraline, Centraline)
+dim(centraline_2021)
 
+# Se voglio, posso salvare i dati creati in un file esterno:
 write.csv(centraline_2021, file = "Centraline_Medie_2021.csv", row.names = F)
 
 
+
+
+
+
+
+#------------- DA FARE:
 
 ##### Aspetto spaziale: 
 # boxplot per tipologia strada
