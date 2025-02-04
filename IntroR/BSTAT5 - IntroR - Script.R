@@ -1,5 +1,5 @@
 
-setwd("C:/Users/roberto.ascari/Desktop/Git/B.STAT.5/Dati Agrimonia")
+setwd("C:/Users/ascari/Desktop/Github/B.STAT.5/Dati Agrimonia")
 load("LussanaPNRR - Agrimonia Giornaliero.RData")
 
 dati <- 
@@ -30,7 +30,7 @@ dim(dati)
 
 
 
-# Posso creare e aggiungere una variabile:
+# Possiamo creare e aggiungere una variabile al dataset:
 dati$AQ_pm10_log <- log(dati$AQ_pm10)
 
 dim(dati)
@@ -46,15 +46,21 @@ centralina2 = "Moggio Loc Penscei"
 # Vogliamo creare due dataset: 
 # - il primo deve contenere tutte e sole le unita' 
 #   statistiche della prima centralina;
-centr1 = subset(dati, NameStation == centralina1,
-                select = c(NameStation, Time, Year, AQ_pm10, AQ_pm25, AQ_pm10_log, 
-                           WE_temp_2m, WE_wind_speed_10m_mean, WE_tot_precipitation))
+centr1 = subset(dati, 
+                NameStation == centralina1,
+                select = c(NameStation, Time, Year, AQ_pm10, 
+                           AQ_pm25, AQ_pm10_log, 
+                           WE_temp_2m, WE_wind_speed_10m_mean, 
+                           WE_tot_precipitation))
 
 # - il secondo deve contenere tutte e sole le unita' 
 #   statistiche della seconda centralina;
-centr2 = subset(dati, NameStation == centralina2,
-                select = c(NameStation, Time, Year, AQ_pm10, AQ_pm25, AQ_pm10_log, 
-                           WE_temp_2m, WE_wind_speed_10m_mean))
+centr2 = subset(dati, 
+                NameStation == centralina2,
+                select = c(NameStation, Time, Year, AQ_pm10, 
+                           AQ_pm25, AQ_pm10_log, 
+                           WE_temp_2m, WE_wind_speed_10m_mean,
+                           WE_tot_precipitation))
 
 
 
@@ -129,7 +135,7 @@ abline(h = 50, col = "red", lwd = 2)
 # Il comando abline() permette di aggiungere, AD UN
 # GRAFICO GIA' ESISTENTE, una retta
 # orizzontale (h = ), verticale (v = ) o 
-# generica y = ax + b (a =, b =) 
+# generica y = a + bx (a =, b =) 
 
 boxplot(centr2$AQ_pm10, main = centralina2)
 abline(h = 50, col = "red", lwd = 2)
@@ -145,9 +151,46 @@ par(mfrow=c(1,1))
 # Abbiamo quindi considerato due centraline che hanno
 # rilevato andamenti molto differenti per il PM10.
 
+# Come mai?
+
+dati[which(dati$NameStation == centralina1), "ARPA_zone"]
+dati[which(dati$NameStation == centralina2), "ARPA_zone"]
+
 
 
 # Diagramma a dispersione
+# Il diagramma a dispersione e' molto utile per analizzare come
+# due variabili variano congiuntamente:
+
+plot(centr1$AQ_pm10, centr1$AQ_pm25, pch = 20,
+     ylab = "PM2.5", xlab = "PM10")
+abline(a = 0, b = 1, col="darkgray", lty = "dashed")
+
+cor(centr1$AQ_pm10, centr1$AQ_pm25)
+
+
+retta = lm(centr1$AQ_pm25~ centr1$AQ_pm10)
+retta
+
+abline(retta, col = "red", lwd = 2)
+
+
+
+
+
+
+plot(centr1$WE_wind_speed_10m_mean, centr1$AQ_pm25, pch = 20)
+plot(centr1$WE_wind_speed_10m_mean, centr1$AQ_pm10, pch = 20)
+
+plot(centr1$WE_tot_precipitation, centr1$AQ_pm25, pch = 20)
+plot(centr1$WE_tot_precipitation, centr1$AQ_pm10, pch = 20)
+
+
+
+
+
+
+
 par(mfrow=c(1,2))
 plot(centr1$Time, centr1$AQ_pm10, type = "l")
 abline(h = 50, col = "red", lwd = 2)
@@ -199,17 +242,6 @@ lines(centr2_2021$Time, centr2_2021$AQ_pm10, col = "red")
 #lines(centr3_2021$Time, centr3_2021$AQ_pm10, col = "blue")
 
 
-
-# Relazione tra variabili
-plot(centr1$AQ_pm10, centr1$AQ_pm25, pch = 20)
-
-
-
-plot(centr1$WE_wind_speed_10m_mean, centr1$AQ_pm25, pch = 20)
-plot(centr1$WE_wind_speed_10m_mean, centr1$AQ_pm10, pch = 20)
-
-plot(centr1$WE_tot_precipitation, centr1$AQ_pm25, pch = 20)
-plot(centr1$WE_tot_precipitation, centr1$AQ_pm10, pch = 20)
 
 
 
