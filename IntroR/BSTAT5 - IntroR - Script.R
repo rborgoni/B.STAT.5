@@ -1,10 +1,6 @@
 
-setwd("C:/Users/ascari/Desktop/Github/B.STAT.5/Dati Agrimonia")
-load("LussanaPNRR - Agrimonia Giornaliero.RData")
-
-dati <- 
-  (Agrimonia[!is.na(Agrimonia$AQ_pm10) & !is.na(Agrimonia$AQ_pm25),])
-
+setwd("C:/Users/ascari/Desktop/Github/B.STAT.5/IntroR")
+load("Agrimonia.RData")
 
 
 ################################
@@ -14,10 +10,6 @@ dati <-
 str(dati)
 summary(dati)
 
-# Tabelle di frequenza: ci indicano quante volte appare
-# ogni modalità di una specifica variabile:
-table(dati$Year)
-table(dati$NameStation)
 
 # Quante righe ha la nostra matrice dei dati?
 # Ossia, quante unita' statistiche stiamo considerando?
@@ -29,12 +21,20 @@ ncol(dati)
 dim(dati)
 
 
-
 # Possiamo creare e aggiungere una variabile al dataset:
 dati$AQ_pm10_log <- log(dati$AQ_pm10)
 
 dim(dati)
 
+
+
+
+# Tabelle di frequenza: ci indicano quante volte appare
+# ogni modalità di una specifica variabile:
+table(dati$Year)
+table(dati$NameStation)
+
+table(dati$NUTS2_Name, dati$ARPA_stat_type)
 
 
 
@@ -169,7 +169,7 @@ abline(a = 0, b = 1, col="darkgray", lty = "dashed")
 cor(centr1$AQ_pm10, centr1$AQ_pm25)
 
 
-retta = lm(centr1$AQ_pm25~ centr1$AQ_pm10)
+retta = lm(centr1$AQ_pm25 ~ centr1$AQ_pm10)
 retta
 
 abline(retta, col = "red", lwd = 2)
@@ -177,18 +177,33 @@ abline(retta, col = "red", lwd = 2)
 
 
 
+# Relazione tra inquinamento e condizioni atmosferiche:
+plot(centr1$WE_wind_speed_10m_mean, centr1$AQ_pm25, pch = 20,
+     xlab="Velocità media vento a 10m di altezza (m/s)", ylab="PM2.5")
+
+cor(centr1$WE_wind_speed_10m_mean, centr1$AQ_pm25)
+
+retta_vento = lm(centr1$AQ_pm25 ~ centr1$WE_wind_speed_10m_mean)
+abline(retta_vento, col = "blue", lwd = 2)
 
 
-plot(centr1$WE_wind_speed_10m_mean, centr1$AQ_pm25, pch = 20)
-plot(centr1$WE_wind_speed_10m_mean, centr1$AQ_pm10, pch = 20)
 
-plot(centr1$WE_tot_precipitation, centr1$AQ_pm25, pch = 20)
-plot(centr1$WE_tot_precipitation, centr1$AQ_pm10, pch = 20)
+plot(centr1$WE_tot_precipitation, centr1$AQ_pm25, pch = 20,
+      xlab="Totale precipitazioni (in m)", ylab="PM2.5")
+
+cor(centr1$WE_tot_precipitation, centr1$AQ_pm25)
+
+retta_precip = lm(centr1$AQ_pm25 ~ centr1$WE_tot_precipitation)
+abline(retta_precip, col = "blue", lwd = 2)
 
 
 
+# Modificando leggemente l'output di un diagramma a dispersione
+# che considera il tempo sull'asse X,
+# possiamo visualizzare una serie storica:
 
-
+plot(centr1$Time, centr1$AQ_pm10)
+plot(centr1$Time, centr1$AQ_pm10, type = "l")
 
 
 par(mfrow=c(1,2))
@@ -198,6 +213,19 @@ plot(centr2$Time, centr2$AQ_pm10, type = "l")
 abline(h = 50, col = "red", lwd = 2)
 par(mfrow=c(1,1))
 
+
+
+# Serie storica del PM10 nelle due centraline:
+plot(centr1$Time, centr1$AQ_pm10, type = "l",
+     main = "Andamento PM10 nel tempo", ylab = "PM10", xlab = "Tempo")
+lines(centr2$Time, centr2$AQ_pm10, col = "red")
+
+# Aggiungiamo delle linee verticali in corrispondenza 
+# dell'inizio di ogni anno:
+as.Date(0)
+abline(v = as.numeric(as.Date(c("2017-01-01", "2018-01-01",
+                                "2019-01-01", "2020-01-01", "2021-01-01",
+                                "2022-01-01"))), col="blue", lty="dashed")
 
 
 
@@ -210,26 +238,10 @@ sum(centr1$AQ_pm10 > 50)
 sum(centr2$AQ_pm10 > 50)
 
 
-# Serie storica del PM10 nelle due centraline:
-plot(centr1$Time, centr1$AQ_pm10, type = "l",
-     main = "Andamento PM10 nel tempo", ylab = "PM10", xlab = "Tempo")
-lines(centr2$Time, centr2$AQ_pm10, col = "red")
-
-# Aggiungiamo delle linee verticali in corrispondenza 
-# dell'inizio di ogni anno:
-as.Date(0)
-abline(v = as.numeric(as.Date(c("2017-01-01", "2018-01-01",
-                      "2019-01-01", "2020-01-01", "2021-01-01",
-                      "2022-01-01"))), col="blue", lty="dashed")
-
-
-
-
-
-
-
-boxplot(dati$AQ_pm10 ~ dati$ARPA_zone)
-boxplot(dati$AQ_pm10 ~ dati$ARPA_stat_type)
+# Contiamo, PER OGNI ANNO, quanti giorni hanno un livello di PM10 
+# superiore a 50:
+aggregate(AQ_pm10 ~ Year, data = centr1, function(x) sum(x > 50))
+aggregate(AQ_pm10 ~ Year, data = centr2, function(x) sum(x > 50))
 
 
 # Filtriamo per anno:
@@ -239,22 +251,53 @@ centr2_2021 = subset(centr2, Year == 2021)
 
 plot(centr1_2021$Time, centr1_2021$AQ_pm10, type = "l")
 lines(centr2_2021$Time, centr2_2021$AQ_pm10, col = "red")
-#lines(centr3_2021$Time, centr3_2021$AQ_pm10, col = "blue")
 
 
 
 
+#------------- DA FARE:
 
-
-
+##########
+# Aggregare per anno per Riccardo
 
 dati_2021 <- subset(dati, Year == 2021)
 dati_2021$IDStation = as.factor(dati_2021$IDStation)
 
+medie_centraline <- aggregate(AQ_pm10 ~ IDStation, data = dati_2021, mean)
 
 
-aggregate(AQ_pm10 ~ IDStation, data = dati_2021, mean)
+# Cambio il nome ad una variabile:
+colnames(medie_centraline)
+colnames(medie_centraline)[2] = "Media PM10"
 
 
+
+####################################################
+####### Creiamo dei nuovi dataset che contengano nuove informazioni:
+
+# Vogliamo creare un nuovo daataset che consideri le centraline
+# come unita' statistiche. Per ogni centralina vogliamo
+# la media avere il valore medio del PM10 nel 2021 (da calcolare)
+# e le informazioni relative ad altitudine, latitudine e longitudine 
+# presenti nel dataset Centraline.csv
+
+
+# IMPORTARE CENTRALINE CON IMPORT DATASET:
+dim(medie_centraline)
+dim(Centraline)
+
+dim(merge(medie_centraline, Centraline))
+
+centraline_2021 = merge(medie_centraline, Centraline)
+
+write.csv(centraline_2021, file = "Centraline_Medie_2021.csv", row.names = F)
+
+
+
+##### Aspetto spaziale: 
+# boxplot per tipologia strada
+
+boxplot(dati$AQ_pm10 ~ dati$ARPA_zone)
+boxplot(dati$AQ_pm10 ~ dati$ARPA_stat_type)
 
 
