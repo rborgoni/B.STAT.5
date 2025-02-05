@@ -51,9 +51,9 @@ Ai seguenti link è possibile scaricare le ultime versioni di [R](https://cran.r
 
 1.  [Introduzione al progetto PNRR](Liceo Lussana_Bergamo_Slide informativa Percorso PNRR.pptx)
 
-2. [Introduzione al corso]
+2. [Introduzione al corso](Slide/BSTAT5 - Intro.pdf)
 
-3.  [Introduzione alla Statistica Descrittiva con R - Slide](IntroR/BSTAT5 - IntroR - 1.pdf)
+3.  [Introduzione alla Statistica Descrittiva con R - Slide](Slide/BSTAT5 - IntroR.pdf)
 
 
 
