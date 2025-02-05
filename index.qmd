@@ -51,19 +51,19 @@ Ai seguenti link è possibile scaricare le ultime versioni di [R](https://cran.r
 
 1.  [Introduzione al progetto PNRR](Liceo Lussana_Bergamo_Slide informativa Percorso PNRR.pptx)
 
-<!-- 2.  [frequency distributions](02_frequency_distributions.pdf) -->
+2. [Introduzione al corso]
 
-2.  [Introduzione alla Statistica Descrittiva con R - Slide](IntroR/BSTAT5 - IntroR - 1.pdf)
-
-3.  [Agrimonia - Metadati](Dati Agrimonia/LussanaPNRR - Metadata Agrimonia.xlsx)
+3.  [Introduzione alla Statistica Descrittiva con R - Slide](IntroR/BSTAT5 - IntroR - 1.pdf)
 
 
 
 ## Dati
 
-1.  [Agrimonia - Dati](IntroR/Agrimonia.RData)
+1.  [Agrimonia - Metadati](Dati Agrimonia/LussanaPNRR - Metadata Agrimonia.xlsx)
 
-2.  [Agrimonia - Dati centraline](IntroR/Centraline.csv)
+2.  [Agrimonia - Dati](IntroR/Agrimonia.RData)
+
+3.  [Agrimonia - Dati centraline](IntroR/Centraline.csv)
 
 
 <!-- # Final Assessment -->
