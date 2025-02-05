@@ -317,15 +317,3 @@ write.csv(centraline_2021, file = "Centraline_Medie_2021.csv", row.names = F)
 
 
 
-
-
-
-#------------- DA FARE:
-
-##### Aspetto spaziale: 
-# boxplot per tipologia strada
-
-boxplot(dati$AQ_pm10 ~ dati$ARPA_zone)
-boxplot(dati$AQ_pm10 ~ dati$ARPA_stat_type)
-
-
