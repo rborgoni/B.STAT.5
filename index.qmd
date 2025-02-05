@@ -57,7 +57,9 @@ Ai seguenti link è possibile scaricare le ultime versioni di [R](https://cran.r
 
 
 
-## Dati
+## Dati e Script
+
+1. [Introduzione alla Statistica Descrittiva con R - Script](IntroR/BSTAT5 - IntroR - Script.R)
 
 1.  [Agrimonia - Metadati](Dati Agrimonia/LussanaPNRR - Metadata Agrimonia.xlsx)
 
