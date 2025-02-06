@@ -1,5 +1,5 @@
 
-setwd("C:/Users/ascari/Desktop/Github/B.STAT.5/IntroR")
+setwd("C:/Users/ascari/Desktop/GitHub/B.STAT.5/IntroR")
 load("Agrimonia.RData")
 
 
@@ -239,10 +239,6 @@ abline(v = as.numeric(as.Date(c("2017-01-01", "2018-01-01",
                                 "2019-01-01", "2020-01-01", "2021-01-01",
                                 "2022-01-01"))), col="blue", lty="dashed")
 
-# Possiamo notare un effetto temporale anche
-# analizzando la concentrazione di PM10
-# di TUTTE le centraline nei vari mesi
-boxplot(dati$AQ_pm10 ~ dati$Month)
 
 
 # Quanti giorni sono caratterizzati da un livello medio di PM10 
@@ -270,6 +266,12 @@ lines(centr2_2021$Time, centr2_2021$AQ_pm10, col = "red")
 
 
 
+
+
+# Possiamo notare un effetto temporale anche
+# analizzando la concentrazione di PM10
+# di TUTTE le centraline nei vari mesi
+boxplot(dati$AQ_pm10 ~ dati$Month)
 
 
 ####################################################
