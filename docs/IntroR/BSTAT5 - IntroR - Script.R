@@ -22,7 +22,7 @@ dim(dati)
 
 
 # Possiamo creare e aggiungere una variabile al dataset:
-dati$AQ_pm10_log <- log(dati$AQ_pm10)
+dati$AQ_pm10_log = log(dati$AQ_pm10)
 
 dim(dati)
 
@@ -285,12 +285,12 @@ lines(centr2_2021$Time, centr2_2021$AQ_pm10, col = "red")
 # Step 1: Ottengo i dati relativi alle rilevazioni di tutte
 # le centraline che corrispondono all'anno 2021.
 
-dati_2021 <- subset(dati, Year == 2021)
+dati_2021 = subset(dati, Year == 2021)
 dati_2021$IDStation = as.factor(dati_2021$IDStation)
 
 # Step 2: aggrego le unità statistiche che corrispondono ad una 
 # stessa centralina tramite la media del PM10
-medie_centraline <- aggregate(AQ_pm10 ~ IDStation, data = dati_2021, mean)
+medie_centraline = aggregate(AQ_pm10 ~ IDStation, data = dati_2021, mean)
 
 
 # Per ottenere un risultato migliore, cambio il nome ad una variabile:
