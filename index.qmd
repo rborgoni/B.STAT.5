@@ -58,6 +58,8 @@ A [questo](https://meet.google.com/nfd-hrnu-sjb) link è possibile accedere ad u
 
 3.  [Introduzione alla Statistica Descrittiva con R - Slide](Slide/BSTAT5 - IntroR.pdf)
 
+4.  [Dati georiferiti ed Interpolazioni - Slide](Slide/02_CoordinateInterp.pdf)
+
 
 
 ## Script
