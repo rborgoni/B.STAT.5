@@ -42,6 +42,9 @@ Gli incontri si svolgeranno secondo il seguente calendario:
 
 Ai seguenti link è possibile scaricare le ultime versioni di [R](https://cran.r-project.org/bin/windows/base/) e di [RStudio](https://posit.co/download/rstudio-desktop/).
 
+# Link Condivisione schermo:
+
+A [questo](https://meet.google.com/nfd-hrnu-sjb) link è possibile accedere ad una chiamata Google Meet in cui verrà condiviso lo schermo del docente per poter seguire la lezione.
 
 # Materiale
 
