@@ -60,9 +60,14 @@ A [questo](https://meet.google.com/nfd-hrnu-sjb) link è possibile accedere ad u
 
 
 
-## Dati e Script
+## Script
 
 1. [Introduzione alla Statistica Descrittiva con R - Script](IntroR/BSTAT5 - IntroR - Script.R)
+
+2. [Interpolazione - Script](IntroR/interpolazione4s.R)
+
+
+## Dati
 
 1.  [Agrimonia - Metadati](Dati Agrimonia/LussanaPNRR - Metadata Agrimonia.xlsx)
 
@@ -70,16 +75,4 @@ A [questo](https://meet.google.com/nfd-hrnu-sjb) link è possibile accedere ad u
 
 3.  [Agrimonia - Dati centraline](IntroR/Centraline.csv)
 
-
-<!-- # Final Assessment -->
-
-<!-- [Assessment paper](assessment.pdf) (due by June 7, 2024) -->
-
-<!-- [Data for the assessment (csv format)](prost.csv) -->
-
-
-
-<!-- # References -->
-
-<!-- Kleinbaum, D.G. and Klein, M. Survival Analysis: A Self-Learning Text. 3rd Edition, Springer, New York, 2012. https://doi.org/10.1007/978-1-4419-6646-9 -->
-
+4. [Interpolazione - Dati](IntroR/Giornata2_Dati.zip)

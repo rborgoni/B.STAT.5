@@ -14,11 +14,18 @@
     "text": "Slide\n\n\nIntroduzione al progetto PNRR\nIntroduzione al corso\nIntroduzione alla Statistica Descrittiva con R - Slide"
   },
   {
-    "objectID": "index.html#dati-e-script",
-    "href": "index.html#dati-e-script",
+    "objectID": "index.html#script",
+    "href": "index.html#script",
     "title": "Analisi di dati ambientali tramite risorse open source per la Data Science",
-    "section": "Dati e Script",
-    "text": "Dati e Script\n\nIntroduzione alla Statistica Descrittiva con R - Script\nAgrimonia - Metadati\nAgrimonia - Dati\nAgrimonia - Dati centraline"
+    "section": "Script",
+    "text": "Script\n\nIntroduzione alla Statistica Descrittiva con R - Script\nInterpolazione - Script"
+  },
+  {
+    "objectID": "index.html#dati",
+    "href": "index.html#dati",
+    "title": "Analisi di dati ambientali tramite risorse open source per la Data Science",
+    "section": "Dati",
+    "text": "Dati\n\nAgrimonia - Metadati\nAgrimonia - Dati\nAgrimonia - Dati centraline\nInterpolazione - Dati"
   },
   {
     "objectID": "about.html",
