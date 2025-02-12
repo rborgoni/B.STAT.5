@@ -64,7 +64,7 @@ A [questo](https://meet.google.com/nfd-hrnu-sjb) link è possibile accedere ad u
 
 1. [Introduzione alla Statistica Descrittiva con R - Script](IntroR/BSTAT5 - IntroR - Script.R)
 
-2. [Interpolazione - Script](IntroR/interpolazione4s.R)
+2. [Dati georiferiti ed Interpolazioni - Script](IntroR/interpolazione4s.R)
 
 
 ## Dati
@@ -75,4 +75,4 @@ A [questo](https://meet.google.com/nfd-hrnu-sjb) link è possibile accedere ad u
 
 3.  [Agrimonia - Dati centraline](IntroR/Centraline.csv)
 
-4. [Interpolazione - Dati](IntroR/Giornata2_Dati.zip)
+4. [Dati georiferiti ed Interpolazioni - Dati](IntroR/Giornata2_Dati.zip)
