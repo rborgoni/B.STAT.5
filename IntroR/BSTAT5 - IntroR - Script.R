@@ -311,8 +311,13 @@ colnames(medie_centraline)[2] = "Media PM10"
 
 # Step 3: importo i dati relativi alle centraline:
 
-
 # IMPORTARE CENTRALINE CON IMPORT DATASET:
+
+# Menu' Environment --> Import Dataset
+# --> From Text (readr)
+# --> Selezionare il file Centraline.csv
+# --> Cambiare il deliminter in semicolon
+
 dim(medie_centraline)
 dim(Centraline)
 
@@ -322,7 +327,9 @@ centraline_2021 = merge(medie_centraline, Centraline)
 dim(centraline_2021)
 
 # Se voglio, posso salvare i dati creati in un file esterno:
-write.csv(centraline_2021, file = "Centraline_Medie_2021.csv", row.names = F)
+write.csv(centraline_2021, 
+          file = "Centraline_Medie_2021.csv", 
+          row.names = F)
 
 
 
