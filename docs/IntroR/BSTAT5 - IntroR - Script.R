@@ -220,10 +220,10 @@ plot(centr1$Time, centr1$AQ_pm10, xlab="Tempo", ylab="PM10",
 
 
 par(mfrow=c(1,2))
-plot(centr1$Time, centr1$AQ_pm10, type = "l", main = "Milano", xlab="Tempo", ylab="PM10")
+plot(centr1$Time, centr1$AQ_pm10, type = "l", ylim=c(0,180), main = "Milano", xlab="Tempo", ylab="PM10")
 abline(h = 50, col = "red", lwd = 2)
-plot(centr2$Time, centr2$AQ_pm10, type = "l", main = "Moggio", xlab="Tempo", ylab="PM10")
-abline(h = 50, col = "red", lwd = 2)
+plot(centr2$Time, centr2$AQ_pm10, type = "l", ylim=c(0,180), main = "Moggio", xlab="Tempo", ylab="PM10")
+abline(h = 50, col = "red", lwd = 2, ylim=c(0,180))
 par(mfrow=c(1,1))
 
 
@@ -265,7 +265,6 @@ aggregate(AQ_pm10 ~ Year,
 # Filtriamo per anno:
 centr1_2021 = subset(centr1, Year == 2021)
 centr2_2021 = subset(centr2, Year == 2021)
-#centr3_2021 = subset(centr3, Year == 2021)
 
 plot(centr1_2021$Time, centr1_2021$AQ_pm10, type = "l", xlab="Tempo", ylab="PM10")
 lines(centr2_2021$Time, centr2_2021$AQ_pm10, col = "red")
@@ -283,6 +282,7 @@ boxplot(dati$AQ_pm10 ~ dati$Month)
 ####################################################
 ####### Creiamo dei nuovi dataset che contengano nuove informazioni:
 
+#Centraline = read.table("Centraline.csv", sep=";", header=T)
 
 # Vogliamo creare un nuovo dataset che consideri le centraline
 # come unita' statistiche. Per ogni centralina vogliamo
