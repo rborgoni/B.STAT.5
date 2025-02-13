@@ -214,21 +214,22 @@ abline(retta_precip, col = "blue", lwd = 2)
 # sull'asse X, possiamo visualizzare una serie
 # storica:
 
-plot(centr1$Time, centr1$AQ_pm10)
-plot(centr1$Time, centr1$AQ_pm10, type = "l")
+plot(centr1$Time, centr1$AQ_pm10, xlab="Tempo", ylab="PM10")
+plot(centr1$Time, centr1$AQ_pm10, xlab="Tempo", ylab="PM10",
+     type = "l")
 
 
 par(mfrow=c(1,2))
-plot(centr1$Time, centr1$AQ_pm10, type = "l")
+plot(centr1$Time, centr1$AQ_pm10, type = "l", main = "Milano", xlab="Tempo", ylab="PM10")
 abline(h = 50, col = "red", lwd = 2)
-plot(centr2$Time, centr2$AQ_pm10, type = "l")
+plot(centr2$Time, centr2$AQ_pm10, type = "l", main = "Moggio", xlab="Tempo", ylab="PM10")
 abline(h = 50, col = "red", lwd = 2)
 par(mfrow=c(1,1))
 
 
 
 # Serie storica del PM10 nelle due centraline:
-plot(centr1$Time, centr1$AQ_pm10, type = "l",
+plot(centr1$Time, centr1$AQ_pm10, type = "l", 
      main = "Andamento PM10 nel tempo", ylab = "PM10", xlab = "Tempo")
 lines(centr2$Time, centr2$AQ_pm10, col = "red")
 
@@ -237,7 +238,8 @@ lines(centr2$Time, centr2$AQ_pm10, col = "red")
 as.Date(0)
 abline(v = as.numeric(as.Date(c("2017-01-01", "2018-01-01",
                                 "2019-01-01", "2020-01-01", "2021-01-01",
-                                "2022-01-01"))), col="blue", lty="dashed")
+                                "2022-01-01"))),
+       col="blue", lty="dashed", lwd = 2)
 
 
 
@@ -252,8 +254,12 @@ sum(centr2$AQ_pm10 > 50)
 
 # Contiamo, PER OGNI ANNO, quanti giorni hanno un livello di PM10 
 # superiore a 50:
-aggregate(AQ_pm10 ~ Year, data = centr1, function(x) sum(x > 50))
-aggregate(AQ_pm10 ~ Year, data = centr2, function(x) sum(x > 50))
+aggregate(AQ_pm10 ~ Year, 
+          data = centr1, 
+          function(x) sum(x > 50))
+aggregate(AQ_pm10 ~ Year, 
+          data = centr2, 
+          function(x) sum(x > 50))
 
 
 # Filtriamo per anno:
@@ -261,7 +267,7 @@ centr1_2021 = subset(centr1, Year == 2021)
 centr2_2021 = subset(centr2, Year == 2021)
 #centr3_2021 = subset(centr3, Year == 2021)
 
-plot(centr1_2021$Time, centr1_2021$AQ_pm10, type = "l")
+plot(centr1_2021$Time, centr1_2021$AQ_pm10, type = "l", xlab="Tempo", ylab="PM10")
 lines(centr2_2021$Time, centr2_2021$AQ_pm10, col = "red")
 
 
@@ -278,9 +284,9 @@ boxplot(dati$AQ_pm10 ~ dati$Month)
 ####### Creiamo dei nuovi dataset che contengano nuove informazioni:
 
 
-# Vogliamo creare un nuovo daataset che consideri le centraline
+# Vogliamo creare un nuovo dataset che consideri le centraline
 # come unita' statistiche. Per ogni centralina vogliamo
-# la media avere il valore medio del PM10 nel 2021 (da calcolare)
+# avere il valore medio del PM10 nel 2021 (da calcolare)
 # e le informazioni relative ad altitudine, latitudine e longitudine 
 # presenti nel dataset Centraline.csv
 
@@ -288,11 +294,13 @@ boxplot(dati$AQ_pm10 ~ dati$Month)
 # le centraline che corrispondono all'anno 2021.
 
 dati_2021 = subset(dati, Year == 2021)
-dati_2021$IDStation = as.factor(dati_2021$IDStation)
 
 # Step 2: aggrego le unità statistiche che corrispondono ad una 
 # stessa centralina tramite la media del PM10
-medie_centraline = aggregate(AQ_pm10 ~ IDStation, data = dati_2021, mean)
+medie_centraline = 
+  aggregate(AQ_pm10 ~ IDStation, 
+            data = dati_2021, 
+            mean)
 
 
 # Per ottenere un risultato migliore, cambio il nome ad una variabile:
