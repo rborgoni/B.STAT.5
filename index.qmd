@@ -60,6 +60,7 @@ A [questo](https://meet.google.com/nfd-hrnu-sjb) link è possibile accedere ad u
 
 4.  [Dati georiferiti ed Interpolazioni - Slide](Slide/02_CoordinateInterp.pdf)
 
+5. [Introduzione alle serie storiche e alla geostatistica spazio-temporale](Slide/UniMiB_LSS_Geostatistica.pdf)
 
 
 ## Script
